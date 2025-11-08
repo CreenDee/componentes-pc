@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware de Computadoras</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        header {
+            height: 50vh !important;
+            background: url(Ima/componentes.jpg) no-repeat center center;
+            background-size: cover;
+            color: rgb(255, 255, 255);
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        header h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5em;
+            color: #f44336;
+            position: relative;
+            z-index: 2;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #00bcd4;
+            background-color: #212121;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 2px solid #00bcd4;
+        }
+
+        h4 {
+            text-align: center;
+            color: #00bcd4;
+            background-color: #212121;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 2px solid #00bcd4;
+        }
+
+        .component {
+            background-color: #333;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgb(0, 0, 0);
+        }
+
+        .component a {
+            display: inline-block;
+            color: #fff;
+            background-color: #f44336;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgb(0, 0, 0);
+        }
+
+        .installation {
+            display: none;
+            text-align: left;
+            background-color: #212121;
+            color: #fff;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+    <script>
+        function toggleInstallation(id) {
+            const installationDiv = document.getElementById(id);
+            if (installationDiv.style.display === "none") {
+                installationDiv.style.display = "block";
+            } else {
+                installationDiv.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>HARDWARE DE LA COMPUTADORA</h1>
+</header>
+
+<nav>
+    <a href="#cpu">CPU</a>
+    <a href="#gpu">GPU</a>
+    <a href="#ram">RAM</a>
+    <a href="#motherboard">Targeta Madre</a>
+    <a href="#storage">Almacenamiento</a>
+    <a href="#power-supply">Fuente de Poder</a>
+</nav>
+
+<h4>Principales variantes de gabinetes de computadoras</h4>
+<figure><img src="ima/case.jpg" height="220px" width="100%" alt="case.jpg"></figure>
+
+<div class="container">
+
+    <!-- CPU -->
+    <section id="cpu" class="component">
+        <h2>CPU (Unidad Central de Procesamiento)</h2>
+        <p>La CPU es el cerebro de la computadora, responsable de realizar todas las operaciones y cálculos...</p>
+        <a href="javascript:void(0);" onclick="toggleInstallation('cpu-installation')">¿Cómo instalar la CPU?</a>
+        <div id="cpu-installation" class="installation">
+            <h3>Instrucciones de Instalación de la CPU</h3>
+            <ol>
+                <li>Tenemos que tomar desde el punto de vista que estamos ensamblando una computadora no desde cero.</li>
+                <li>Primero colocamos la tarjeta madre en un lugar cómodo...</li>
+                <li>Localiza el socket de la CPU en la placa base.</li>
+                <li>Levanta la palanca del socket e inserta la CPU con cuidado, alineando los pines.</li>
+                <li>Cierra la palanca y aplica la pasta térmica en la CPU.</li>
+                <li>Instala el disipador de calor y el ventilador encima de la CPU.</li>
+                <li>Cierra la carcasa y enciende la computadora.</li>
+            </ol>
+            <figure><img src="ima/cpu1.jpg" height="220px" width="100%" alt="cpu1.jpg"></figure>
+            <figure><img src="ima/cpu2.jpg" height="220px" width="100%" alt="cpu2.jpg"></figure>
+        </div>
+        <figure><img src="ima/cpu.jpg" height="220px" width="100%" alt="cpu.jpg"></figure>
+    </section>
+
+    <!-- GPU -->
+    <section id="gpu" class="component">
+        <h2>GPU (Unidad de Procesamiento Gráfico)</h2>
+        <p>La GPU se encarga del procesamiento de gráficos y es esencial para tareas como el gaming...</p>
+        <a href="javascript:void(0);" onclick="toggleInstallation('gpu-installation')">¿Cómo instalar la GPU?</a>
+        <div id="gpu-installation" class="installation">
+            <h3>Instrucciones de Instalación de la GPU</h3>
+            <ol>
+                <li>Apaga y desenchufa la computadora.</li>
+                <li>Abre la carcasa y localiza la ranura PCIe.</li>
+                <li>Inserta la GPU en la ranura PCIe y asegúrala con un tornillo.</li>
+                <li>Conecta los cables de alimentación necesarios.</li>
+                <li>Instala los controladores desde el sitio del fabricante.</li>
+            </ol>
+            <figure><img src="ima/grafica.jpeg" height="220px" width="100%" alt="grafica.jpeg"></figure>
+        </div>
+        <figure><img src="ima/asusrogstrix4090.jpg" height="220px" width="100%" alt="asusrogstrix4090.jpg"></figure>
+    </section>
+
+    <!-- RAM -->
+    <section id="ram" class="component">
+        <h2>RAM (Memoria de Acceso Aleatorio)</h2>
+        <p>La RAM es la memoria de corto plazo de la computadora...</p>
+        <a href="javascript:void(0);" onclick="toggleInstallation('ram-installation')">¿Cómo instalar la RAM?</a>
+        <div id="ram-installation" class="installation">
+            <h3>Instrucciones de Instalación de la RAM</h3>
+            <ol>
+                <li>Apaga y desenchufa la computadora.</li>
+                <li>Abre la carcasa y localiza las ranuras de RAM.</li>
+                <li>Abre los clips e inserta el módulo hasta que encaje.</li>
+            </ol>
+            <figure><img src="ima/ram.jpg" height="220px" width="100%" alt="ram.jpg"></figure>
+        </div>
+        <figure><img src="ima/ramde.jpg" height="220px" width="100%" alt="ramde.jpg"></figure>
+    </section>
+
+    <!-- MOTHERBOARD -->
+    <section id="motherboard" class="component">
+        <h2>Motherboard (Tarjeta Madre)</h2>
+        <p>La motherboard conecta todos los componentes de la computadora...</p>
+        <a href="javascript:void(0);" onclick="toggleInstallation('motherboard-installation')">¿Cómo instalar la Motherboard?</a>
+        <div id="motherboard-installation" class="installation">
+            <h3>Instrucciones de Instalación de la Motherboard</h3>
+            <ol>
+                <li>Abre la carcasa y coloca la motherboard alineada.</li>
+                <li>Asegúrala con tornillos y conecta los cables de alimentación.</li>
+            </ol>
+            <figure><img src="ima/s9-u05-05-product-shot-motherboard-original-rwd.jpg.rendition.intel.web.1920.1080.jpg" height="220px" width="100%" alt="motherboard"></figure>
+        </div>
+        <figure><img src="ima/madre.jpeg" height="220px" width="100%" alt="madre.jpg"></figure>
+    </section>
+
+    <!-- STORAGE -->
+    <section id="storage" class="component">
+        <h2>Almacenamiento</h2>
+        <p>El almacenamiento guarda los datos de la computadora...</p>
+        <a href="javascript:void(0);" onclick="toggleInstallation('storage-installation')">¿Cómo instalar el almacenamiento?</a>
+        <div id="storage-installation" class="installation">
+            <h3>Instrucciones de Instalación del Almacenamiento</h3>
+            <ol>
+                <li>Abre la carcasa y localiza la bahía o ranura M.2.</li>
+                <li>Conecta los cables o atornilla el SSD/HDD según corresponda.</li>
+            </ol>
+            <figure><img src="ima/s9-u05-33-install-storage-original-rwd.jpg.rendition.intel.web.1072.603.jpg" height="220px" width="100%" alt="almacenamiento"></figure>
+        </div>
+        <figure><img src="ima/m2.jpg" height="220px" width="100%" alt="m2.jpg"></figure>
+    </section>
+
+    <!-- POWER SUPPLY -->
+    <section id="power-supply" class="component">
+        <h2>Fuente de Poder</h2>
+        <p>La fuente de poder suministra energía eléctrica a los componentes...</p>
+        <a href="javascript:void(0);" onclick="toggleInstallation('power-supply-installation')">¿Cómo instalar la Fuente de Poder?</a>
+        <div id="power-supply-installation" class="installation">
+            <h3>Instrucciones de Instalación de la Fuente de Poder</h3>
+            <ol>
+                <li>Coloca la fuente en su bahía y asegúrala con tornillos.</li>
+                <li>Conecta los cables de 24 y 8 pines a la motherboard.</li>
+            </ol>
+            <figure><img src="ima/fuenteinstalando.jpg" height="220px" width="100%" alt="fuenteinstalando.jpg"></figure>
+        </div>
+        <figure><img src="ima/fuentee.jpg" height="220px" width="100%" alt="fuentee.jpg"></figure>
+    </section>
+
+</div>
+
+<figure><img src="ima/pc gamer.jpg" height="220px" width="100%" alt="pc gamer.jpg"></figure>
+
+</body>
+</html>
+
+
